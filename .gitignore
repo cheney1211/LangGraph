@@ -1,2 +1,4 @@
 .env
 Dockerfile
+__pycache__/
+.streamlit/secrets.toml
