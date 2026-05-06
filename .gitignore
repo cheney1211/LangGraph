@@ -1,5 +1,35 @@
+# --- Claude Code Specific ---
+.claude/               # 存储会话历史、快照和工具状态
+claude-debug.log       # 调试日志
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+*.swp
+
+# --- Environment & Secrets ---
 .env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# --- Build & Dependencies (根据你的语言二选一或保留) ---
+# Node.js
+node_modules/
+dist/
+build/
+npm-debug.log*
+
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 venv/
 .venv/
+.pytest_cache/
+
+
+# --- IDEs ---
+.vscode/
+.idea/

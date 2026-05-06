@@ -1,0 +1,45 @@
+// Check if a value is a custom-uploaded image (data URL or blob)
+export function isCustomAvatar(value) {
+  return value && (value.startsWith('data:image/') || value.startsWith('blob:'));
+}
+
+// Get the display URL for an avatar ID or custom URL
+export function getAvatarUrl(avatarValue) {
+  if (!avatarValue) return null;
+
+  // Custom uploaded image
+  if (isCustomAvatar(avatarValue)) {
+    return avatarValue;
+  }
+
+  // Local static file
+  return `/static/avatars/${avatarValue}.svg`;
+}
+
+// Fallback preset list (used until API data loads)
+export const FALLBACK_AVATARS = [
+  { id: 'avt-1', name: '御姐·绫', color: '#e8d5e8' },
+  { id: 'avt-2', name: '御姐·薰', color: '#d5e8f0' },
+  { id: 'avt-3', name: '御姐·雪', color: '#f0e8d5' },
+  { id: 'avt-4', name: '冷峻·瞬', color: '#d5d5e8' },
+  { id: 'avt-5', name: '冷峻·辽', color: '#e0d5c8' },
+  { id: 'avt-6', name: '冷峻·零', color: '#c8d8e8' },
+  { id: 'not-1', name: '知性·真白', color: '#f5f0e8' },
+  { id: 'not-2', name: '知性·翠', color: '#e8f0e8' },
+  { id: 'not-3', name: '知性·琥珀', color: '#f0e8d5' },
+  { id: 'per-1', name: '气质·月', color: '#e8e0f0' },
+  { id: 'per-2', name: '气质·莲', color: '#f0e8e0' },
+  { id: 'per-3', name: '气质·霞', color: '#e0e8f0' },
+  { id: 'mic-1', name: '都市·昂', color: '#d5e0e8' },
+  { id: 'mic-2', name: '都市·葵', color: '#e8d5d5' },
+  { id: 'mic-3', name: '都市·枫', color: '#d5e8d5' },
+  { id: 'pep-1', name: '神秘·夜', color: '#d0d0e0' },
+  { id: 'pep-2', name: '神秘·影', color: '#e0d0d0' },
+  { id: 'pep-3', name: '神秘·雾', color: '#d0e0e0' },
+  { id: 'lor-1', name: '和风·樱', color: '#f5e0e8' },
+  { id: 'lor-2', name: '和风·葵', color: '#e0e8f5' },
+  { id: 'lor-3', name: '和风·椿', color: '#f0e0d5' },
+  { id: 'pro-1', name: '精英·诚', color: '#e0e8e0' },
+  { id: 'pro-2', name: '精英·晶', color: '#e8e0e8' },
+  { id: 'pro-3', name: '精英·司', color: '#d5e8e0' },
+];

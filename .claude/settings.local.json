@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(curl -s --connect-timeout 10 -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js -o /tmp/cdn_cubism.js)",
+      "Read(//tmp/**)",
+      "Bash(curl -s --connect-timeout 10 -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Referer: https://cubism.live2d.com/' -H 'Accept: */*' -o /dev/null -w '%{http_code} %{size_download}' https://cubism.live2d.com/sdk-web/cubismcore/_em_module.wasm)",
+      "Bash(curl -s --connect-timeout 10 -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Referer: https://cubism.live2d.com/' -o /dev/null -w '%{http_code} %{size_download}' https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.data)",
+      "Bash(npm pack *)",
+      "Bash(curl -s --connect-timeout 10 \"https://cdn.jsdelivr.net/npm/@live2d/cubismcore@1.0.2/live2dcubismcore.min.js\" -o /tmp/jsdelivr_cubism.js)",
+      "Bash(tar -tzf live2dcubismcore-1.0.2.tgz)",
+      "Bash(tar -tzf \"E:/study/python files/LangGraph/frontend/live2dcubismcore-1.0.2.tgz\")",
+      "WebFetch(domain:unpkg.com)",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "WebSearch",
+      "Bash(curl -sL \"https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js\")",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -sL -o \"E:/study/python files/LangGraph/app/static/cubism/live2dcubismcore.min.js.new\" \"https://cdn.jsdelivr.net/gh/ZhuangRenyang/live2d-moc3@1.0.0/js/frame/live2dcubismcore.min.js\")",
+      "WebFetch(domain:www.live2d.com)",
+      "Bash(curl -sL \"https://registry.npmjs.org/live2dcubismcore\")",
+      "Bash(curl -sL -o \"/tmp/live2dcubismcore.tgz\" \"https://registry.npmjs.org/live2dcubismcore/-/live2dcubismcore-1.0.2.tgz\")",
+      "Bash(tar tzf *)",
+      "Bash(tar xzf *)",
+      "Bash(npm run *)",
+      "Bash(node *)",
+      "Bash(curl -sL \"https://registry.npmjs.org/@ai-zen/live2d-core\")",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(curl -sL -o \"/tmp/ai-zen-live2d-core.tgz\" \"https://registry.npmjs.org/@ai-zen/live2d-core/-/live2d-core-1.0.2.tgz\")",
+      "Read(//c/tmp/**)",
+      "Read(//e//**)",
+      "Bash(curl -sL \"https://registry.npmjs.org/@hazart-pkg/live2d-core\")",
+      "Bash(curl -sL -o \"/tmp/hazart-live2d-core.tgz\" \"https://registry.npmjs.org/@hazart-pkg/live2d-core/-/live2d-core-1.0.1.tgz\")",
+      "Bash(curl -sL \"https://registry.npmjs.org/live2d-renderer-lite\")",
+      "Bash(npm install *)",
+      "Bash(grep *)",
+      "Bash(npx vite *)",
+      "Bash(mkdir -p \"E:/study/python files/LangGraph/app/static/logo\")",
+      "Bash(mkdir -p \"E:/study/python files/LangGraph/app/static/avatars\")",
+      "Bash(pip list *)"
+    ]
+  }
+}
